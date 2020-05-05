@@ -1,18 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
-#define BUFF_SIZE 8
-
-typedef struct Planet Planet;
-struct Planet
-{
-    char name_this[4];
-    char name_orbits[4];
-    Planet* tree_orbits;
-    Planet* tree_orbited_by;
-    Planet* next_orbited_by;
-    Planet* next_list;
-};
+#include "include.h"
 
 Planet* add_planet(Planet* planet_head, char name[4], char orbits[4])
 {
